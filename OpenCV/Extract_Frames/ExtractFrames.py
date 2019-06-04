@@ -4,6 +4,10 @@ def FrameCapture(path):
       
     vidObj=cv2.VideoCapture(path) #Path to video file 
 
+    #To know the fps
+    fps = vidObj.get(cv2.CAP_PROP_FPS)
+    print("FPS of our video is ",fps)
+      
     count=0 #counter variable
   
     success=1 #checks whether frames were extracted 
